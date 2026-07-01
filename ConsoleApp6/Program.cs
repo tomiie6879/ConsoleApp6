@@ -56,3 +56,63 @@ Enemy en = new Enemy();
 en.TakeDamage(100);
 Boss bos = new Boss();
 bos.TakeDamage(50);
+// bai 7
+Player p = new Player();
+p.TakeDamage(100);
+p.Interactable();
+Enemy e = new Enemy();
+e.TakeDamage(30);
+Coin coin = new Coin();
+coin.Collectable();
+Chest chest = new Chest();
+chest.Interactable();
+// bai 8 
+FullTimeEmployee ft = new FullTimeEmployee();
+ft.CalculateSalary("Mai",4000000);
+PartTimeEmployee pt = new PartTimeEmployee();
+pt.CalculateSalary("Ngo",3000000);
+// bai 9
+CreditCard creditCard = new CreditCard();
+creditCard.Pay(30);
+PayPal payPal = new PayPal();
+payPal.Pay(50);
+BankTransfer bankTransfer = new BankTransfer();
+bankTransfer.Pay(70);
+// bai 10 
+Warrior warrior1 = new Warrior();
+warrior1.Attack("Warrior");
+warrior.Movable();
+warrior.TakeDamage(30);
+Mage mage1 = new Mage();
+mage1.Attack("Mage");
+mage1.Movable();
+mage1.TakeDamage(50);
+Healer healer = new Healer();
+healer.Attack("Healer");
+healer.Movable();
+// bai tap thu thach
+List<CharacterBTTT> characters = new List<CharacterBTTT>();
+List<IActionable> items = new List<IActionable>();
+characters.Add(new PlayerBTTT { Name = "Hero" });
+characters.Add(new EnemyBTTT { Name = "Dog" });
+characters.Add(new EnemyBTTT { Name = "Cat" });
+characters.Add(new EnemyBTTT { Name = "Turtle" });
+characters.Add(new BossBTTT { Name = "Dragon" });
+
+for (int i = 0; i < 5; i++)
+{
+    items.Add(new CoinBTTT());
+    
+}
+items.Add(new ChestBTTT());
+items.Add(new ChestBTTT());
+
+foreach (var c in characters)
+{
+    Console.WriteLine(c);
+}
+
+foreach (var item in items)
+{
+    Console.WriteLine(item);
+}

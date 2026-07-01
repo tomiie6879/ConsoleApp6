@@ -1,6 +1,6 @@
 namespace ConsoleApp6;
 
-public class Player: IDamageable
+public class Player: IDamageable,IInteractable
 {
     private int HP = 100;
     public void TakeDamage(int damage)
@@ -16,5 +16,10 @@ public class Player: IDamageable
         }
         
         
+    }
+
+    public void Interactable()
+    {
+        Console.WriteLine($"Player has been interacted");
     }
 }
